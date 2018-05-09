@@ -1,0 +1,29 @@
+import { Component, OnInit } from '@angular/core';
+import { routerTransition } from '../../router.animations';
+
+@Component({
+    selector: 'app-tables',
+    templateUrl: './tables.component.html',
+    styleUrls: ['./tables.component.scss'],
+    animations: [routerTransition()]
+})
+export class TablesComponent implements OnInit {
+
+    //Url al que se accede para previsualizar la imagen
+    localUrl: any[];
+
+    constructor() {}
+
+    ngOnInit() {}
+
+    //Previsualiza la imagen
+    showPreviewImage(event: any) {
+        if (event.target.files && event.target.files[0]) {
+            var reader = new FileReader();
+            reader.onload = (event: any) => {
+                this.localUrl = event.target.result;
+            }
+            reader.readAsDataURL(event.target.files[0]);
+        }
+    }
+}
