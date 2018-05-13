@@ -1,6 +1,6 @@
-//modal: ViewEncasulation
+//modal: ViewEncapsulation
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { routerTransition } from '../../router.animations';
+// import { routerTransition } from '../../router.animations';
 //modal: Importar NgbModal, ModalDismissReasons
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 

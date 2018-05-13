@@ -5,8 +5,11 @@ import { TablesRoutingModule } from './tables-routing.module';
 import { TablesComponent } from './tables.component';
 import { PageHeaderModule } from './../../shared';
 
+//modal: importar NgbModule
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 @NgModule({
-    imports: [CommonModule, TablesRoutingModule, PageHeaderModule],
+    imports: [CommonModule, TablesRoutingModule, PageHeaderModule, NgbModule.forRoot()], //modal: NgbModule.forRoot()
     declarations: [TablesComponent]
 })
 export class TablesModule {}
